@@ -1,6 +1,6 @@
-import { getByPlaceholderText } from '@testing-library/react'
-import React from 'react'
-import{
+import { getByPlaceholderText } from '@testing-library/react';
+import React from 'react';
+import {
   SectionContainer,
   BackgroundImage,
   ContentContainer,
@@ -8,25 +8,34 @@ import{
   Subtitle,
   Tag,
   Button,
-}from './PageSection.styles'
+} from './PageSection.styles';
 
-function PageSection({title,boldTitle,subtitle, tag, button, image,boldFirst,centeredText}) {
+function PageSection({
+  title,
+  boldTitle,
+  subtitle,
+  tag,
+  button,
+  image,
+  boldFirst,
+  centeredText,
+}) {
   return (
     <SectionContainer>
-      <BackgroundImage src={image}/>
-      <ContentContainer>
+      <BackgroundImage src={image} />
+      <ContentContainer centeredText={centeredText}>
         {tag && <Tag>{tag}</Tag>}
 
         <Title>
           {boldFirst ? (
             <>
-            <b>{boldTitle}</b>
-            {title}
+              <b>{boldTitle}</b>
+              {title}
             </>
-          ): (
+          ) : (
             <>
-            {title}
-            <b>{boldTitle}</b>
+              {title}
+              <b>{boldTitle}</b>
             </>
           )}
         </Title>
@@ -36,7 +45,7 @@ function PageSection({title,boldTitle,subtitle, tag, button, image,boldFirst,cen
         <Button>{button}</Button>
       </ContentContainer>
     </SectionContainer>
-  )
+  );
 }
 
-export default PageSection
+export default PageSection;
