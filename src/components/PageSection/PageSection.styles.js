@@ -27,11 +27,62 @@ export const ContentContainer = styled.div`
     props.centerText &&
     css`
       text-align: center;
+      left: 50%;
+      transform: translate(-50%, -50%);
     `}
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+  font-size: 5.6rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 2rem 0;
 
-export const Subtitle = styled.p``;
+  & b {
+    font-weight: 700;
+    display: block;
+  }
+`;
 
-export const Tag = styled.div``;
+export const Subtitle = styled.p`
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  text-transform: none;
+`;
+
+export const Tag = styled.div`
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  padding-left: 4rem;
+  position: relative;
+
+  &:before {
+    background-color: #03d;
+    content: '';
+    display: block;
+    height: 0.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+  }
+`;
+
+export const Button = styled.a`
+  display: inline-block;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 0.2rem solid #ffffffbd;
+  padding: 1.5rem 5.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: white;
+  }
+`;
