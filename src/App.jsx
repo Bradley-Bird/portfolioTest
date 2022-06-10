@@ -1,3 +1,15 @@
+
+import PageSection from "./components/PageSection/PageSection";
+import pageData from "./pageData";
+import { nanoid } from "nanoid";
+
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+  {pageData.map(data =>(
+    <PageSection {...data} key={nanoid()}/>
+  ))}
+    </>
+  );
 }
